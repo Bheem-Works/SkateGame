@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProtoType 🔁</title>
+    <style>
+        .container{
+            background-color: transparent;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .rectangle{
+          display: flex;
+          justify-content: center;
+          align-items: end;
+          background-color: purple;
+            height: 500px;
+            width: 600px;
+            border: 1px solid black;
+            position: relative;
+        }
+        .circle{
+            border-radius: 20%;
+            border: 10px solid orange;
+            color: orange;
+            justify-content: center;
+            width: 10px;
+          margin-bottom: 10px;
+            position: absolute;
+        }
+        .stroke{
+            width: 100px;
+            color:black;
+            border: 3px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="rectangle">
+            <div class="circle"></div>
+            <div class="stroke"></div>
+        </div>
+    </div>
+</body>
+</html>
