@@ -33,7 +33,7 @@ function draw () {
     let starting_point = ctx.moveTo(450, 765); // Starting point
     console.log(starting_point);
     let ending_point = ctx.lineTo(550, 765); // Endpoint, moving down 100 pixels
-    console.log(ending_point)
+    console.log(ending_point);
     ctx.stroke();
 
     // Circle
@@ -50,6 +50,8 @@ function user_keyWord(event) {
   if(event.key === "d") {
     // To increase the numbers of the x. Write the positive value; 
     // and set the value to the true; 
+    // Checking if the buttons key is working or not; 
+    console.log("You have pressed the d. And you have shifted to the right.")
     let key_value_right = true;
     if(key_value_right){
       // here i need to increase it.. 
