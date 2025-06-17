@@ -59,7 +59,7 @@ function user_keyWord(event) {
     }
   } 
   if(event.key === "a"){
-    // To increase the numbers of the x. Write the negative number value to shift to the left. 
+    // Decrease the numbers of the x. Write the negative number value to shift to the left.
     // and set the value true; ?? do i need to set the value true; 
     let key_value_left = true; 
     while(key_value_left){
