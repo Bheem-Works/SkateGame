@@ -4,6 +4,11 @@
 const canvas = document.getElementById("sketch");
     const ctx = canvas.getContext("2d");
 
+  // Assigning value to the functions and re-render that again. 
+
+function draw () {
+  // Will this works i don't have any ideas about this thing's; 
+
     // Set canvas size to window dimensions
     const window_width = window.innerWidth;
     const window_height = window.innerHeight;
@@ -34,3 +39,28 @@ const canvas = document.getElementById("sketch");
     ctx.lineWidth = 30;
     ctx.arc(500, 720, 15, 0, Math.PI * 2, false);
     ctx.stroke();
+
+}
+draw();
+
+// Track the users inputs; 
+function user_keyWord(event) {
+  if(event.key === "d") {
+    // To increase the numbers of the x. Write the positive value; 
+    // and set the value to the true; 
+    let key_value_right = true;
+    if(key_value_right){
+      // here i need to increase it.. 
+
+    }
+  } 
+  if(event.key === "a"){
+    // To increase the numbers of the x. Write the negative number value to shift to the left. 
+    // and set the value true; ?? do i need to set the value true; 
+    let key_value_left = true; 
+    while(key_value_left){
+      // decrese the value of the x. And set the value to the negative. 
+
+    }
+  }
+}
