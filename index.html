@@ -6,46 +6,8 @@
   <title>Stroke Game</title>
 </head>
 <body>
-  <canvas id="reactangle" height="574" width="1485">
-  </canvas>
-  <canvas id="circle"></canvas>
-  <canvas id="stroke"></canvas>
-  <canvas id="strokeGreen"></canvas>
-  <script>
-    // function draw() {
-    // const canvas = document.getElementById("stroke");
-    // const ctx = canvas.getContext("2d")
-    // ctx.fillStyle = "black";
-    // ctx.fillRect(10,10,4000,4000); // X(horizintal) : 1000 , Y(vertical) : 100, width:150, height:100
-    // console.log("the canvas is working");
-    // }
-    
-    // Stroke
-      const stroke = document.getElementById("stroke");
-      const ctx = stroke.getContext("2d");
-
-      ctx.lineWidth = 4; // The widht of the line; 
-      ctx.strokeStyle = "pink"; // The color of the stroke 
-      ctx.beginPath(); // This is used to join fill Up; 
-      ctx.moveTo(20,140); // Start points : x , y ; 
-      ctx.lineTo(280,140); // Ends points : x , y; 
-      ctx.stroke(); // To execute; 
-
-    // Circle 
-    const circle = document.getElementById("circle");
-    const ctxCircle = circle.getContext("2d")
-    ctxCircle.fillStyle = "red";
-    ctxCircle.beginPath();
-    ctxCircle.ellipse(60, 75, 50, 30, Math.PI * 0.25, 0, Math.PI * 1.5); 
-    ctx.fill();
-    // Circle green; 
-    const circleGreen = document.getElementById("circleGreen");
-    circleGreen.getContext("2d");
-    circleGreen.fillStyle = "green";
-circleGreen.beginPath();
-circleGreen.ellipse(240, 75, 50, 30, Math.PI * 0.25, 0, Math.PI, true);
-circleGreen.fill();
-
-</script>
+ <!-- You need to use the one Canvas only for all sort of the thing's -->   
+  <canvas id="sketch"></canvas>
+ <script src="script.js"></script>
 </body>
 </html>
