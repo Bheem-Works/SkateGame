@@ -29,8 +29,9 @@ function draw () {
     ctx.beginPath();
     ctx.strokeStyle = "white";
     ctx.lineWidth = 15;
-    ctx.moveTo(450, 765); // Starting point
-    ctx.lineTo(550, 765); // Endpoint, moving down 100 pixels
+  // let's store the line to the variables; 
+    let starting_point = ctx.moveTo(450, 765); // Starting point
+    let ending_point = ctx.lineTo(550, 765); // Endpoint, moving down 100 pixels
     ctx.stroke();
 
     // Circle
@@ -45,13 +46,16 @@ draw();
 
 // Track the users inputs; 
 function user_keyWord(event) {
+  counter = 0; 
+
   if(event.key === "d") {
     // To increase the numbers of the x. Write the positive value; 
     // and set the value to the true; 
     let key_value_right = true;
     if(key_value_right){
       // here i need to increase it.. 
-
+      counter++;
+      starting_point = counter; 
     }
   } 
   if(event.key === "a"){
@@ -60,7 +64,8 @@ function user_keyWord(event) {
     let key_value_left = true; 
     while(key_value_left){
       // decrese the value of the x. And set the value to the negative. 
-
+    counter --; 
+    ending_point = counter; 
     }
   }
 }
