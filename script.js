@@ -4,7 +4,17 @@
 
 const canvas = document.getElementById("sketch");
 const ctx = canvas.getContext("2d");
-ctx.fillStyle = "blue";
-ctx.fillRect(10,10,400,600); // (x,y,widht,height)
+// Setting the background color of the canvas. 
+// Taking the full widht and the heights; 
+var window_width= window.innerWidth;
+var window_height = window.innerHeight;
+canvas.style.backgroundColor = "pink";
+canvas.width= window_width;
+canvas.height = window_height;
 
-
+// Stroke 
+ctx.lineWidth= 8;
+ctx.strokeStyle = "orange";
+ctx.moveTo(30,140); // First param is used to move left , right and another is used to move to the up and down; 
+ctx.lineTo(280,140);
+ctx.stroke();
