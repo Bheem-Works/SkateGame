@@ -1,4 +1,4 @@
-// Note - Canvas is used for draw the elements by using javascript; And canvas use the 2d graphis animation. 
+// Note - Canvas is used for draw the elements by using javascript; And canvas use the 2d graphis animation.
 // getContext helps to get the context element for the drawing; 
 // 2d let use draw the shape and size. inside the browser.
 const canvas = document.getElementById("sketch");
@@ -12,7 +12,7 @@ function draw () {
     // Set canvas size to window dimensions
     const window_width = window.innerWidth;
     const window_height = window.innerHeight;
-    canvas.width = window_width;
+    canvas.width = window_width;// it will provide you the window inside width; 
     canvas.height = window_height;
 
     // Set background color
@@ -31,7 +31,9 @@ function draw () {
     ctx.lineWidth = 15;
   // let's store the line to the variables; 
     let starting_point = ctx.moveTo(450, 765); // Starting point
+    console.log(starting_point);
     let ending_point = ctx.lineTo(550, 765); // Endpoint, moving down 100 pixels
+    console.log(ending_point)
     ctx.stroke();
 
     // Circle
@@ -43,19 +45,14 @@ function draw () {
 
 }
 draw();
-
 // Track the users inputs; 
 function user_keyWord(event) {
-  counter = 0; 
-
   if(event.key === "d") {
     // To increase the numbers of the x. Write the positive value; 
     // and set the value to the true; 
     let key_value_right = true;
     if(key_value_right){
       // here i need to increase it.. 
-      counter++;
-      starting_point = counter; 
     }
   } 
   if(event.key === "a"){
@@ -64,8 +61,6 @@ function user_keyWord(event) {
     let key_value_left = true; 
     while(key_value_left){
       // decrese the value of the x. And set the value to the negative. 
-    counter --; 
-    ending_point = counter; 
     }
   }
 }
