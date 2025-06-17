@@ -46,6 +46,8 @@ function draw () {
 }
 draw();
 // Track the users inputs; 
+
+window.addEventListener(event, user_keyWord(event));
 function user_keyWord(event) {
   if(event.key === "d") {
     // To increase the numbers of the x. Write the positive value; 
