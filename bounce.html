@@ -6,18 +6,82 @@
     <title>ProtoType 🔁</title>
 </head>
 <body>
-  <canvas id="moveElement">
-  </canvas>
 
-  <script>
-  // Creating a rectangle 
-    const canvas = document.getElementById("moveElement");
-    const ctx = canvas.getContext("2d");
-    const window_height = window.innerHeight;
-    const window_width = window.innerWidth;
-    ctx.fillRect(0,0,100,100);
-  ctx.fillStyle = "red";
-  ctx.fill();
-  </script>
+<script>
+// Tracking the event Listener. 
+  window.addEventListener("keydown",(e)=>{
+   console.log(e); // Giving the console of the event. 
+    if(e.key === "a"){
+      alert("this is the a keywords");
+    } 
+  })
+// Giving the ball X and the Y value; For reuse and call. 
+ballX = 200;
+ballY = 150;
+ballDX = 0; 
+ballDY = 0;
+
+function setup() {
+  createCanvas(400, 300); // Width is the four hundred and the height is also four hundred; 
+}
+
+function draw() {
+  background(0,100,200);
+  // Dy > Stands for the chaning y 
+  // Dx > Stand for the changing X 
+  //Keyboards inputs; 
+  if(keyIsPressed){
+    // UP; 
+    if(key === "w") {
+    ballDY = -1; // Go to the up becuase Y horizintal is minus; 
+    ballDX = 0; // Set the DX to 0 to go only one step. 
+    } 
+        // Down; 
+    if(key === "s") {
+    ballDY = 1;
+    ballDX = 0;
+    } 
+        // Right; 
+    if(key === "d") {
+    ballDX = 1;
+    ballDY = 0;
+    } 
+        // Down; 
+    if(key === "a") {
+    ballDX = -1;
+    ballDY = 0; 
+    } 
+    
+  }
+  
+  // Jump Back; 
+  // Right side. 
+  if(ballX > 400) {
+  ballX = 0;   
+  }
+  // Left Side.
+  if(ballX < 0) {
+  ballX = 400; 
+  }
+  
+  // Up Side; 
+    if(ballY > 300) {
+  ballY = 0; 
+  }
+  
+  // Down side. 
+    if(ballY < 0) {
+  ballY = 300; 
+  }
+  
+  // Move the ball; 
+  ballX += ballDX; 
+  ballY += ballDY;
+  
+  // Draw a ball;  
+  circle(ballX,ballY,30) // The third param is the size of the ball; 
+  
+}
+</script>
 </body>
 </html>
