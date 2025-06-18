@@ -57,7 +57,7 @@ function user_keyWord(event) {
     lineXStart -= 10;
     lineXEnd -= 10;
     console.log("Moved left. New line start:", lineXStart, "end:", lineXEnd);
-    moved = false;
+    moved = true;
   }; 
 
   // Redrawing it again; 
